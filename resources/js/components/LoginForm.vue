@@ -34,23 +34,61 @@
         </div>
         <button type="submit" @click="login" class="btn btn-primary form-control mb-2 submit-button">Sign in</button>
         <button type="submit" @click="login" class="btn btn-primary form-control dark-button">Sign in with Foodics F5</button>
-        <button type="submit" @click="login" class="btn btn-link form-control mt-3 btn-color">Create New Account</button>
+        <button type="submit" @click="singUp" class="btn btn-link form-control mt-3 btn-color">Create New Account</button>
     </div>
 </template>
 
 <script>
+    import User from "../apis/User";
+
     export default {
         data() {
             return {
                 user: {
                     email: '',
                     password: ''
-                }
+                },
+                errors: []
             }
         },
         methods: {
+            // login() {
+            //     this.$store.dispatch('User/loginUser', this.user);
+            // },
+
             login() {
-                this.$store.dispatch('User/loginUser', this.user);
+                User.login(this.user)
+                .then(response => {
+                    this.$store.commit("LOGIN", true);
+
+                    // console.log(response.data.user.token);
+                    localStorage.setItem("token", response.data.user.token);
+
+                    window.location.replace('user')
+                    // this.$router.push({ name: "Dashboard" });
+                })
+                .catch(error => {
+                    if (error.response.status === 422) {
+                        this.errors = error.response.data.errors;
+                    }
+                });
+
+                // axios.post('/api/login', {
+                //     email: user.email,
+                //     password: user.password
+                // })
+                // .then(response => {
+                //     if (response.data.user) {
+                //         // save token
+                //         localStorage.setItem('user', JSON.stringify(response.data.user));
+
+                //         window.location.replace('/api/users')
+                //     }
+                // });
+            },
+
+            singUp() {
+                window.location.replace('/api/register')
             }
         },
     }

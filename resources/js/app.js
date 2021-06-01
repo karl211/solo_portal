@@ -9,6 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 
 import store from "./store"
+import 'admin-lte/dist/css/adminlte.css'; 
 
 /**
  * The following block of code may be used to automatically register your
@@ -23,7 +24,7 @@ import store from "./store"
 
 Vue.component('register-form', require('./components/RegisterForm.vue').default);
 Vue.component('login-form', require('./components/LoginForm.vue').default);
-Vue.component('users-list', require('./components/UserList.vue').default);
+Vue.component('user-list', require('./components/UserList.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
