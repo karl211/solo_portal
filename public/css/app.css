@@ -1,5 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+label {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.logo {
+  margin: auto;
+  height: 94.0007247925px;
+  width: 292.1269836426px;
+  border-radius: 0px;
+}
+
+.pos-20 {
+  position: relative;
+  top: 20px;
+}
+
+.pos-1em {
+  position: relative;
+  top: 1em;
+}
+
+.input-group-color {
+  background: #fff;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -62,7 +92,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: rgba(0, 0, 0, 0.19);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -475,7 +505,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #f8fafc;
+  background-color: rgba(0, 0, 0, 0.19);
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -3735,13 +3765,13 @@ input[type=button].btn-block {
   outline: 0;
 }
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.19), 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.19), 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.19), 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range::-moz-focus-outer {
   border: 0;
@@ -3915,8 +3945,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #f8fafc;
-  border-color: #dee2e6 #dee2e6 #f8fafc;
+  background-color: rgba(0, 0, 0, 0.19);
+  border-color: #dee2e6 #dee2e6 rgba(0, 0, 0, 0.19);
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;

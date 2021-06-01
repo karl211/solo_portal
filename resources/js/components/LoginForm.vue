@@ -1,15 +1,40 @@
 <template>
-    <div>
+    <div class="login-wrapper mt-5">
+        <div class="logo pl-3">
+            <span>
+                <img src="/images/solo.svg" alt="solo">
+                <img src="/images/dot.svg" class="pos-20" alt="dot">
+                <img src="/images/portal.svg" class="pos-1em" alt="portal">
+            </span>
+        </div>
+
+        <p class="text-center">Login to your account</p>
+
         <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
-            <input type="username" class="form-control" v-model="user.email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text pl-2 pr-2 bg-white">
+                        <img src="/images/user-icon.svg" class="" alt="user-icon">
+                    </span>
+                </div>
+                <input type="username" class="form-control text-input pl-2 border-left-0" v-model="user.email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+            </div>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" v-model="user.password" id="exampleInputPassword1" placeholder="Password">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text pl-2 pr-2 bg-white">
+                        <img src="/images/lock.svg" class="" alt="lock">
+                    </span>
+                </div>
+                <input type="password" class="form-control text-input pl-2 border-left-0" v-model="user.password" id="exampleInputPassword1" placeholder="Password">
+            </div>
         </div>
-        <button type="submit" @click="login" class="btn btn-primary">Submit</button>
+        <button type="submit" @click="login" class="btn btn-primary form-control mb-2 submit-button">Sign in</button>
+        <button type="submit" @click="login" class="btn btn-primary form-control dark-button">Sign in with Foodics F5</button>
+        <button type="submit" @click="login" class="btn btn-link form-control mt-3 btn-color">Create New Account</button>
     </div>
 </template>
 
@@ -32,5 +57,41 @@
 </script>
 
 <style lang="scss" scoped>
+    .login-wrapper {
+        margin: auto;
+        height: 535px;
+        width: 445px;
+        border-radius: 18px;
+        border-color: none;
+        background: #fff;
+        padding: 46px;
+    }
 
+    .submit-button {
+        height: 44px;
+        width: 351px;
+        border-radius: 8px;
+        background: #FF6B00;
+    }
+
+    .dark-button {
+        height: 44px;
+        width: 351px;
+        border-radius: 8px;
+        background: #32394C;
+    }
+
+    .text-input {
+        height: 49px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 26px 0px #0000001A;
+    }
+
+    .input-group-color {
+        background: #fff;
+    }
+
+    .btn-color {
+        color: #FF6B00;
+    }
 </style>

@@ -19,6 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/', [LoginController::class, 'index']);
+Route::name('login')->get('/login', [LoginController::class, 'index']);
 Route::get('/register', [LoginController::class, 'register']);
 Route::get('/users', [UserController::class, 'index']);
+
+// Route::middleware(['auth:api'])->group(function () {
+    
+// });

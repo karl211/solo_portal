@@ -28,7 +28,7 @@ const actions = {
                 // save token
                 localStorage.setItem('user', JSON.stringify(response.data.user));
 
-                window.location.replace('/api/users')
+                window.location.replace('/users')
             }
         });
     },

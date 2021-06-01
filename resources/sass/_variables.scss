@@ -1,5 +1,7 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: rgba(0, 0, 0, 0.19);
+
+
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
@@ -17,3 +19,35 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+label {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.logo {
+    margin: auto;
+    height: 94.00072479248047px;
+    width: 292.1269836425781px;
+    border-radius: 0px;
+}
+
+.pos-20 {
+    position: relative;
+    top: 20px;
+}
+
+.pos-1em {
+    position: relative;
+    top: 1em;
+}
+
+.input-group-color {
+    background: #fff;
+}
+
+
