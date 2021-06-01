@@ -71,7 +71,7 @@
                         <img src="/images/lock.svg" class="" alt="lock">
                     </span>
                 </div>
-                <input type="password" class="form-control text-input pl-2 border-left-0" v-model="user.password" id="exampleInputPassword1" placeholder="Re enter your password">
+                <input type="password" class="form-control text-input pl-2 border-left-0" v-model="user.c_password" id="exampleInputPassword1" placeholder="Re enter your password">
             </div>
         </div>
 
@@ -100,55 +100,22 @@
         </div>
 
         <div class="form-group">
-            <label for="email">Mobile Number</label>
+            <label for="mobile_number">Mobile Number</label>
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text pl-2 pr-2 bg-white">
-                        <img src="/images/mobile.svg" class="" alt="mobile">
+                        <img src="/images/mobile.svg" class="" alt="mobile_number">
                     </span>
                 </div>
-                <input type="username" class="form-control text-input pl-2 border-left-0" v-model="user.email" id="email" aria-describedby="emailHelp" placeholder="Enter your mobile number">
+                <input type="username" class="form-control text-input pl-2 border-left-0" v-model="user.mobile_number" id="mobile_number" aria-describedby="emailHelp" placeholder="Enter your mobile number">
             </div>
         </div>
 
         <div class="form-group">
             <button type="submit" @click="register" class="btn btn-primary form-control mb-2 submit-button">Register</button>
-            <button type="submit" @click="register" class="btn btn-link form-control mt-0 btn-color">Create New Account</button>
+            <button type="submit" @click="login" class="btn btn-link form-control mt-0 btn-color">Login to existing accountt</button>
         </div>
     </div>
-
-    <!-- <div>
-        <div class="row">
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="first_name">First Name</label>
-                    <input type="username" class="form-control" v-model="user.first_name" id="first_name" aria-describedby="emailHelp" placeholder="Enter username">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="last_name">Last Name</label>
-                    <input type="username" class="form-control" v-model="user.last_name" id="last_name" aria-describedby="emailHelp" placeholder="Enter username">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="username" class="form-control" v-model="user.email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" v-model="user.password" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Confirm Password</label>
-            <input type="password" class="form-control" v-model="user.c_password" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <button type="submit" @click="register" class="btn btn-primary">Submit</button>
-    </div> -->
 </template>
 
 <script>
@@ -156,17 +123,24 @@
         data() {
             return {
                 user: {
+                    first_name: '',
+                    last_name: '',
                     email: '',
                     password: '',
                     c_password: '',
-                    first_name: '',
-                    last_name: ''
+                    concept_name: '',
+                    country: '',
+                    mobile_number: ''
                 }
             }
         },
         methods: {
             register() {
                 this.$store.dispatch('User/registerUser', this.user);
+            },
+
+            login () {
+                window.location.replace('/api/login')
             }
         },
     }

@@ -6,3 +6,38 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+body {
+    background: rgba(0, 0, 0, 0.19) !important;
+}
+
+label {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.logo {
+    margin: auto;
+    height: 94.00072479248047px;
+    width: 292.1269836425781px;
+    border-radius: 0px;
+}
+
+.pos-20 {
+    position: relative;
+    top: 20px;
+}
+
+.pos-1em {
+    position: relative;
+    top: 1em;
+}
+
+.input-group-color {
+    background: #fff;
+}

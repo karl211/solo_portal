@@ -55,6 +55,10 @@
             return {
             }
         },
+        created() {
+            // let user = JSON.parse(localStorage.getItem('user'));
+            // axios.defaults.headers.common['Authorization'] = "Bearer " + user.token;
+        },
         methods: {
             register() {
             }

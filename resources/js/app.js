@@ -9,6 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 
 import store from "./store"
+import 'admin-lte/dist/css/adminlte.css'; 
 
 /**
  * The following block of code may be used to automatically register your

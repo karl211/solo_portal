@@ -1,35 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
-label {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 12px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-.logo {
-  margin: auto;
-  height: 94.0007247925px;
-  width: 292.1269836426px;
-  border-radius: 0px;
-}
-
-.pos-20 {
-  position: relative;
-  top: 20px;
-}
-
-.pos-1em {
-  position: relative;
-  top: 1em;
-}
-
-.input-group-color {
-  background: #fff;
-}
-
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10031,4 +10001,37 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+body {
+  background: rgba(0, 0, 0, 0.19) !important;
+}
+
+label {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.logo {
+  margin: auto;
+  height: 94.0007247925px;
+  width: 292.1269836426px;
+  border-radius: 0px;
+}
+
+.pos-20 {
+  position: relative;
+  top: 20px;
+}
+
+.pos-1em {
+  position: relative;
+  top: 1em;
+}
+
+.input-group-color {
+  background: #fff;
 }
